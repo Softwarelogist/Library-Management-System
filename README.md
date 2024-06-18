@@ -42,13 +42,14 @@ cd library-management-system
 Follow the installation guide on the MySQL website to install MySQL on your system.
 # 2 Create a Database:
 Open the MySQL command line client and run the following command to create a database:
+```bash
 CREATE DATABASE library_management
-
+```
 # 3 Create Tables:
 
 Use the following SQL script to create the necessary tables:
 USE library_management;
-
+```bash
 CREATE TABLE patrons (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -72,7 +73,7 @@ CREATE TABLE transactions (
     FOREIGN KEY (book_id) REFERENCES books(id),
     FOREIGN KEY (patron_id) REFERENCES patrons(id)
 );
-
+```
 # step 4: Configure Database Connection
 Download MySQL Connector for Java:
 
@@ -83,7 +84,7 @@ Add the MySQL Connector JAR file to your project's lib directory.
 Update Database Configuration:
 
 Open DatabaseHelper.java and update the database connection details:
-
+```bash
 public class DatabaseHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/library_management";
     private static final String USER = "your-username";
@@ -92,7 +93,7 @@ public class DatabaseHelper {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
-
+```
 ## Step 5: Build the Project
 # Use Maven to build the project:
 mvn clean install
@@ -101,21 +102,21 @@ Run the application using the following Maven command:
 mvn javafx:run
 
 # Usage
-# Login: Use the login screen to access the main dashboard.
-# Register Patron: Navigate to the patron registration section and enter the required details.
-# Manage Books: Use the options to add new books, issue books to patrons, and process book returns.
-# Screenshots
-# Sign up
+#### Login: Use the login screen to access the main dashboard.
+#### Register Patron: Navigate to the patron registration section and enter the required details.
+#### Manage Books: Use the options to add new books, issue books to patrons, and process book returns.
+#### Screenshots
+## Sign up
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/34d9d75b-5f96-4390-b1a2-8015304bc800)
-# Sing in
+## Sing in
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/d8e4c631-6b6e-48a1-a5a3-976df6a131e7)
-# Add Book
+## Add Book
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/261a7c10-5734-4994-9902-2a82cc4e0c8d)
-# Issue Book
+## Issue Book
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/3aa3383f-5874-4431-a999-50b977cb49f1)
-# Return Book
+## Return Book
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/d13646bd-2a87-432e-bd36-8cef92f2ac87)
-# Register Patron
+## Register Patron
 ![image](https://github.com/Softwarelogist/Library-Management-System/assets/83673608/07a6a5e9-a193-4f69-91b7-0d6da665b7f1)
 
 # Contributing
