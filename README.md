@@ -72,6 +72,7 @@ CREATE TABLE transactions (
     FOREIGN KEY (book_id) REFERENCES books(id),
     FOREIGN KEY (patron_id) REFERENCES patrons(id)
 );
+
 # step 4: Configure Database Connection
 Download MySQL Connector for Java:
 
@@ -82,16 +83,16 @@ Add the MySQL Connector JAR file to your project's lib directory.
 Update Database Configuration:
 
 Open DatabaseHelper.java and update the database connection details:
-j
+
 public class DatabaseHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/library_management";
     private static final String USER = "your-username";
     private static final String PASSWORD = "your-password";
-
     public static Connection connect() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
+
 ## Step 5: Build the Project
 # Use Maven to build the project:
 mvn clean install
