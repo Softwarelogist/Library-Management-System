@@ -9,7 +9,7 @@ import java.util.List;
 public class DatabaseHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/library_management";
     private static final String USER = "root";
-    private static final String PASSWORD = "@TaAs1587@"; // Replace with your MySQL password
+    private static final String PASSWORD = "Your Password here"; // Replace with your MySQL password
 
     public static Connection connect() {
         Connection conn = null;
