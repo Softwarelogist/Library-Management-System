@@ -33,9 +33,9 @@ The Library Management System is a JavaFX application designed to help libraries
 
 ### Step 1: Clone the Repository
 
-```bash
 git clone https://github.com/yourusername/library-management-system.git
-cd library-management-system
+cd library-management-system 
+
 
 ## Step 2: Set Up the MySQL Database
 # 1 Install MySQL:
@@ -72,18 +72,17 @@ CREATE TABLE transactions (
     FOREIGN KEY (book_id) REFERENCES books(id),
     FOREIGN KEY (patron_id) REFERENCES patrons(id)
 );
-tep 3: Configure Database Connection
+# step 4: Configure Database Connection
 Download MySQL Connector for Java:
 
 Download the MySQL Connector/J from the official MySQL website.
-Add MySQL Connector to Project:
+Add MySQL Connector to Project: 
 
 Add the MySQL Connector JAR file to your project's lib directory.
 Update Database Configuration:
 
 Open DatabaseHelper.java and update the database connection details:
-java
-Copy code
+j
 public class DatabaseHelper {
     private static final String URL = "jdbc:mysql://localhost:3306/library_management";
     private static final String USER = "your-username";
@@ -93,10 +92,10 @@ public class DatabaseHelper {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
-## Step 4: Build the Project
+## Step 5: Build the Project
 # Use Maven to build the project:
 mvn clean install
-## Step 5: Run the Application
+## Step 6: Run the Application
 Run the application using the following Maven command:
 mvn javafx:run
 
@@ -124,10 +123,8 @@ We welcome contributions! Please fork the repository and submit a pull request f
 # License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-% Contact
+# Contact
 For any inquiries or support, please contact us at arshadsaeed2709@gmail.com
-
-
 
 
 
