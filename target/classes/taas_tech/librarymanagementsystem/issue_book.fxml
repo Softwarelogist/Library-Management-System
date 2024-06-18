@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="taas_tech.librarymanagementsystem.library.guiController.IssueBookController" prefHeight="400" prefWidth="600"
+          style="-fx-background-color:linear-gradient(to left top,#090979,#00d4ff);">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+    <TextField fx:id="bookIdField" promptText="Book ID" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="patronIdField" promptText="Patron ID" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+    <TableView fx:id="tableView" prefHeight="200" prefWidth="500"
+               style="-fx-background-color:linear-gradient(to left top,#090979,#00d4ff);">
+        <columns>
+            <TableColumn fx:id="bookIdColumn" prefWidth="50" text="Book ID"/>
+            <TableColumn fx:id="patronIdColumn" prefWidth="150" text="Patron ID"/>
+            <TableColumn fx:id="issueDateColumn" prefWidth="150" text="Issue Date"/>
+            <TableColumn fx:id="returnDateColumn" prefWidth="150" text="Return Date"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="11">
+        <Button text="Add Book" onAction="#goToaddBook" GridPane.rowIndex="5"  style="-fx-background-color: #4caf50; -fx-text-fill: #ffffff;" GridPane.columnIndex="0"/>
+        <Button text="Issue Book" onAction="#issueBook" style="-fx-background-color: #2196f3; -fx-text-fill: #ffffff;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Button text="Return Book" onAction="#goToReturnBook"  style="-fx-background-color: #ff9800; -fx-text-fill: #ffffff;" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <Button text="Register Patron" onAction="#goToRegisterPatron"  style="-fx-background-color: #9c27b0; -fx-text-fill: #ffffff;" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <Button onAction="#Exit" text="Exit" style="-fx-background-color: #f44336; -fx-text-fill: #ffffff;" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+    </HBox>
+</GridPane>

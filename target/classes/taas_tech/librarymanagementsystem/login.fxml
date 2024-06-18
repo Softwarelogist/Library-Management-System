@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="300" prefWidth="500" style="-fx-background-color:linear-gradient(to left top,#00d4ff,#090979);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taas_tech.librarymanagementsystem.library.guiController.LoginController">
+  <padding><Insets bottom="50" left="50" right="50" top="50" /></padding>
+  <TextField fx:id="usernameField" prefWidth="350.0" promptText="Username" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  <PasswordField fx:id="passwordField" promptText="Password" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <Button onAction="#login" text="Login" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+  <Text fill="linear-gradient(to left top,#00d4ff,#019508)" fontSmoothingType="LCD" lineSpacing="2.0" strokeWidth="2.0" text="  Library Management System!" wrappingWidth="430.3919982910156" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <cursor>
+         <Cursor fx:constant="S_RESIZE" />
+      </cursor>
+      <font>
+         <Font name="Elephant Italic" size="24.0" />
+      </font></Text>
+
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
