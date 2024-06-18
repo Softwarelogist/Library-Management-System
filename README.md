@@ -37,7 +37,7 @@ The Library Management System is a JavaFX application designed to help libraries
 git clone https://github.com/yourusername/library-management-system.git
 cd library-management-system
 
-### Step 2: Set Up the MySQL Database
+## Step 2: Set Up the MySQL Database
 # 1 Install MySQL:
 Follow the installation guide on the MySQL website to install MySQL on your system.
 # 2 Create a Database:
@@ -93,10 +93,10 @@ public class DatabaseHelper {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
-### Step 4: Build the Project
+## Step 4: Build the Project
 # Use Maven to build the project:
 mvn clean install
-### Step 5: Run the Application
+## Step 5: Run the Application
 Run the application using the following Maven command:
 mvn javafx:run
 
